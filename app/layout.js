@@ -3,7 +3,9 @@ import "./globals.css";
 import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import { CartProvider } from "@/context/CarContext";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
+
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +37,7 @@ export default function RootLayout({ children }) {
             <Header />
             <Toaster position="top-right" />
             {children}
+            <Analytics />
           </CartProvider>
         </Fade>
       </body>

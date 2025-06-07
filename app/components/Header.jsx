@@ -32,9 +32,9 @@ export default function Header() {
             <header role="banner">
                 <div className={headerStyles.containerHeader}>
                     <div className={headerStyles.logo}>
-                        <p className={headerStyles.titulogo} aria-label="TLALIWARE - Tienda Online">
+                        <a href="/" className={headerStyles.titulogo} aria-label="TLALIWARE - Tienda Online">
                             TLALIWARE
-                        </p>
+                        </a>
                     </div>
 
                     <nav role="navigation" aria-label="Navegación principal">

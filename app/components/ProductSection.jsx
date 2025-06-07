@@ -2,7 +2,7 @@ import styles from "../styles/mainContent.module.css";
 
 import { useCart } from "@/context/CarContext";
 
-export default function () {
+export default function ({ isAuthenticated }) {
 
     const { addToCart } = useCart();
 
@@ -56,7 +56,7 @@ export default function () {
                             data-product-id="1"
                             data-product-name="Maceta inteligente con autorriego"
                             data-product-price="700.00"
-                            onClick={addToCart}
+                            onClick={() => isAuthenticated ? addToCart() : window.location.href = "/auth"}
                         >
                             <i className="fas fa-cart-plus" aria-hidden="true"></i>
                             Agregar al Carrito

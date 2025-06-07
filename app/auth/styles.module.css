@@ -226,9 +226,7 @@
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
+
 
     .container {
         flex-direction: column;

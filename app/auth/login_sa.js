@@ -5,6 +5,7 @@ import { pool } from "../api/db/db";
 import querys from "../api/db/querys";
 import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
+
 const JWT_SECRET = process.env.JWT_SECRET;
 
 export async function handleSubmitLogIn(_prevState, formData) {
@@ -38,6 +39,8 @@ export async function handleSubmitLogIn(_prevState, formData) {
             };
         }
 
+        console.log(process.env.DATABASE_URL);
+        console.log(JWT_SECRET);
 
         //Guardar sesion
         const token = jwt.sign(

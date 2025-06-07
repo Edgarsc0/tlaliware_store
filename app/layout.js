@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import { CartProvider } from "@/context/CarContext";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +30,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <CartProvider>
-          <Header />
-          <Toaster position="top-right" />
-          {children}
-        </CartProvider>
+        <Fade>
+          <CartProvider>
+            <Header />
+            <Toaster position="top-right" />
+            {children}
+          </CartProvider>
+        </Fade>
       </body>
     </html>
   );

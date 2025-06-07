@@ -14,7 +14,6 @@ export default function Home() {
 
   return (
     <>
-
       <main id="main-content" role="main">
         <ProductSection isAuthenticated={isAuthenticated} />
         <BeneficiosSection />

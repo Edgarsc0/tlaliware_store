@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.containerWrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.texto{
+    color: black;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 550px;
+    display: flex;
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.containerForm {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.containerForm form {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    padding: 20px;
+}
+
+.containerForm h2 {
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signIn h2 {
+    margin-top: 30px;
+}
+
+.socialNetworks {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.socialNetworks img {
+    border: 1px solid #C9CCCB;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.containerForm span {
+    font-size: clamp(11px, 2vw, 12px);
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.containerInput {
+    width: min(300px, 90%);
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+}
+
+.containerInput input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    font-size: 14px;
+}
+
+.containerForm a {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.button {
+    width: min(170px, 80%);
+    height: 45px;
+    font-size: clamp(13px, 2.5vw, 15px);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #042923 0%, #0f3d35 50%, #19594d 100%);
+    color: white;
+}
+
+.signUp {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-100%);
+}
+
+.signUp h2 {
+    margin-top: 30px;
+}
+
+.container.toggle .signIn {
+    transform: translateX(100%);
+}
+
+.container.toggle .signUp {
+    transform: translateX(0);
+}
+
+.containerWelcome {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    background: linear-gradient(135deg, #042923 0%, #0f3d35 50%, #19594d 100%);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+
+.container.toggle .containerWelcome {
+    transform: translateX(0);
+    border-radius: 0 50% 50% 0;
+    background: linear-gradient(135deg, #042923 0%, #0f3d35 50%, #19594d 100%);
+}
+
+.containerWelcome .welcome {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.welcomeSignIn {
+    transform: translateX(100%);
+}
+
+.containerWelcome h3 {
+    font-size: clamp(28px, 5vw, 40px);
+}
+
+.containerWelcome p {
+    font-size: clamp(12px, 2vw, 14px);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.containerWelcome .button {
+    border: 2px solid white;
+    background-color: transparent;
+    width: min(150px, 80%);
+}
+
+.container.toggle .welcomeSignIn {
+    transform: translateX(0);
+}
+
+.container.toggle .welcomeSignUp {
+    transform: translateX(-100%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 600px;
+        height: auto;
+        min-height: 500px;
+        margin: 10px;
+    }
+
+    .containerForm form {
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .containerWelcome .welcome {
+        padding: 0 20px;
+        gap: 15px;
+    }
+
+    .socialNetworks {
+        gap: 8px;
+    }
+
+    .socialNetworks img {
+        padding: 6px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        min-height: 600px;
+        max-width: 100%;
+    }
+
+    .containerWelcome {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        transform: translateY(-100%);
+        border-radius: 0 0 50% 50%;
+    }
+
+    .container.toggle .containerWelcome {
+        transform: translateY(0);
+        border-radius: 50% 50% 0 0;
+    }
+
+    .containerForm {
+        order: 2;
+    }
+
+    .containerWelcome {
+        order: 1;
+    }
+
+    .containerForm form {
+        min-height: 300px;
+        padding: 20px 15px;
+    }
+
+    .containerWelcome .welcome {
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .containerWelcome h3 {
+        font-size: 24px;
+    }
+
+    .containerWelcome p {
+        font-size: 12px;
+    }
+
+    .socialNetworks {
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+
+    .socialNetworks img {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .containerInput {
+        width: 95%;
+        margin-bottom: 8px;
+    }
+
+    .button {
+        width: 90%;
+        height: 40px;
+    }
+
+    .containerWelcome .button {
+        width: 70%;
+    }
+
+    .container.toggle .signIn {
+        transform: translateY(100%);
+    }
+
+    .container.toggle .signUp {
+        transform: translateY(0);
+    }
+
+    .signUp {
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 320px) {
+    .containerForm h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .containerForm form {
+        padding: 15px 10px;
+    }
+
+    .containerInput {
+        height: 35px;
+        padding: 0 10px;
+    }
+
+    .button {
+        height: 38px;
+    }
+
+    .containerWelcome {
+        height: 130px;
+    }
+
+    .containerWelcome h3 {
+        font-size: 20px;
+    }
+}

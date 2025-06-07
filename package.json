@@ -9,15 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "ionicons": "^8.0.9",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.3.3",
+    "pg": "^8.16.0",
+    "postcss": "^8.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.57.0",
+    "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
     "react-ionicons": "^4.2.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "@tailwindcss/postcss": "^4.1.8",
+    "tailwindcss": "^4.1.8"
   }
 }

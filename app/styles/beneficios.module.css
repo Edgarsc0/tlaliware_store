@@ -1,0 +1,92 @@
+.benefitsSection {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 60px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(151, 237, 226, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.benefitsContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.benefitsContainer h2 {
+    font-size: 2.5rem;
+    color: #97ede2;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefitItem {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(151, 237, 226, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefitItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(151, 237, 226, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.benefitItem:hover::before {
+    left: 100%;
+}
+
+.benefitItem:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(151, 237, 226, 0.4);
+}
+
+.benefitItem i {
+    font-size: 3rem;
+    color: #00bfa6;
+    margin-bottom: 20px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.benefitItem:hover i {
+    color: #97ede2;
+    transform: scale(1.1);
+}
+
+.benefitItem h3 {
+    font-size: 1.4rem;
+    color: #97ede2;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.benefitItem p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}

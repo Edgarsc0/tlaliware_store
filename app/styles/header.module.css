@@ -1,0 +1,80 @@
+.containerHeader {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.titulogo {
+    margin-top: 5px;
+    font-size: 25px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+
+}
+
+/* Botón de carrito en el header */
+.cartButton {
+    position: relative;
+    background: rgba(0, 191, 166, 0.2);
+    border: 2px solid #00bfa6;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartButton:hover {
+    background: #00bfa6;
+    color: #042923;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 191, 166, 0.3);
+}
+
+.cartCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #d11;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(221, 17, 17, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

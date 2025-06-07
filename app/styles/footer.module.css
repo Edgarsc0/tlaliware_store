@@ -1,0 +1,125 @@
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 30px;
+}
+
+.footerSection h3,
+.footerSection h4 {
+    color: #97ede2;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.footerSection h4 {
+    font-size: 1.1rem;
+}
+
+.footerSection p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footerSection ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerSection ul li {
+    margin-bottom: 12px;
+}
+
+.footerSection ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.footerSection ul li a:hover {
+    color: #97ede2;
+    transform: translateX(5px);
+}
+
+.footerSection ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #97ede2;
+    transition: width 0.3s ease;
+}
+
+.footerSection address {
+    font-style: normal;
+}
+
+.footerSection address p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footerSection address i {
+    color: #00bfa6;
+    width: 16px;
+    text-align: center;
+}
+
+.footerSection ul li a:hover::after {
+    width: 100%;
+}
+
+.footerBottom {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(151, 237, 226, 0.1);
+}
+
+.footerBottom p {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socialLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 191, 166, 0.1);
+    color: #97ede2;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(151, 237, 226, 0.2);
+}
+
+.socialLinks a:hover {
+    background: #00bfa6;
+    color: #042923;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 191, 166, 0.3);
+}
+
+.footer-section address {
+    font-style: normal;
+}
